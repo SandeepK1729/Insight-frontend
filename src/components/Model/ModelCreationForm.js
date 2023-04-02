@@ -51,7 +51,7 @@ class ModelForm extends React.Component {
             ...this.state,
             showMessage: true,
             messageType: "secondary",
-            message: "uploading, please wait"
+            message: "training model, please wait"
         })
         event.preventDefault();
 
