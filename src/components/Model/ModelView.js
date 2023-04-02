@@ -52,12 +52,15 @@ class Models extends React.Component {
 				<ModelForm/>
 			</Popup>
 			<Table hover striped bordered responsive>	
-				<tr>
-					<th>ID</th>
-					<th>Model Name</th>
-					<th>Model Path</th>
-					<th>Dataset ID</th>
-				</tr>					
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Model Name</th>
+						<th>Model Path</th>
+						<th>Dataset ID</th>
+					</tr>					
+				</thead>
+				<tbody>
 				{
 					items.map((item) => (
 						<tr key = { item.id } >
@@ -68,6 +71,7 @@ class Models extends React.Component {
 						</tr>	
 					))
 				}
+				</tbody>
 			</Table>
 		</div>
 	);

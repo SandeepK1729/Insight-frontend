@@ -26,7 +26,6 @@ class Datasets extends React.Component {
 	componentDidMount() {
 		axios.get("/api/datasets/")
 			.then((json) => {
-				console.log(json.data);
 				this.setState({
 					items: json.data,
 					DataisLoaded: true
@@ -54,11 +53,14 @@ class Datasets extends React.Component {
 				</Popup>
 
 				<Table hover striped bordered responsive>	
-					<tr>
-						<th>ID</th>
-						<th>Name</th>
-						<th>Path</th>
-					</tr>					
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Name</th>
+							<th>Path</th>
+						</tr>	
+					</thead>
+					<tbody>
 					{
 						items.map((item) => (
 							<tr key = { item.id } >
@@ -68,6 +70,7 @@ class Datasets extends React.Component {
 							</tr>	
 						))
 					}
+					</tbody>				
 				</Table>
 			</div>
 		);
