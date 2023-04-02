@@ -16,7 +16,7 @@ class ModelForm extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
     componentDidMount() {
-		fetch("http://127.0.0.1:8000/api/supported-models/")
+		fetch(`${process.env.REACT_APP_API_URL}/api/supported-models/`)
         .then((res) => res.json())
         .then((json) => {
             this.setState({
@@ -25,7 +25,7 @@ class ModelForm extends React.Component {
             });
         })
 
-        fetch("http://127.0.0.1:8000/api/datasets/")
+        fetch(`${process.env.REACT_APP_API_URL}/api/datasets/`)
         .then((res) => res.json())
         .then((json) => {
             this.setState({
@@ -60,7 +60,7 @@ class ModelForm extends React.Component {
             dataset_id : this.state.dataset_id
         };
 
-        axios.post(`http://127.0.0.1:8000/api/models/`, data)
+        axios.post(`${process.env.REACT_APP_API_URL}/api/models/`, data)
         .then(res => {
             if(res.status === 200) {
                 this.setState({

@@ -55,7 +55,7 @@ class DatasetForm extends React.Component {
         };
         
 
-        axios.post(`/api/datasets/`, data)
+        axios.post(`${process.env.REACT_APP_API_URL}/api/datasets/`, data)
         .then(res => {
             if(res.status === 200) {
                 this.setState({

@@ -24,9 +24,8 @@ class Datasets extends React.Component {
 	// ComponentDidMount is used to
 	// execute the code
 	componentDidMount() {
-		axios.get("/api/datasets/")
+		axios.get(`${process.env.REACT_APP_API_URL}/api/datasets/`)
 			.then((json) => {
-		console.log(json);
 				
 				this.setState({
 					items: json.data,

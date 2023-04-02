@@ -24,7 +24,7 @@ class Models extends React.Component {
 	// ComponentDidMount is used to
 	// execute the code
 	componentDidMount() {
-		axios.get("/api/models/")
+		axios.get(`${process.env.REACT_APP_API_URL}/api/models/`)
 			.then((json) => {
 				this.setState({
 					items: json.data,
