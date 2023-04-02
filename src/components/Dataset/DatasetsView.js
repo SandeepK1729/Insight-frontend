@@ -33,14 +33,13 @@ class Datasets extends React.Component {
 			})
 	}
 	render() {
-		const { DataisLoaded, items } = this.state;
-		if (!DataisLoaded) 
+		if (!this.state.DataisLoaded) 
 			return (
 				<div>
 					<h1> Pleses wait some time.... </h1> 
 				</div>
 			);
-
+		else
 		return (
 			<div className = "App">
 				<h1> List of Datasets </h1> 
@@ -62,7 +61,7 @@ class Datasets extends React.Component {
 					</thead>
 					<tbody>
 					{
-						items.map((item) => (
+						this.state.items.map((item) => (
 							<tr key = { item.id } >
 								<td>{ item.id }</td>
 								<td>{ item.name }</td>
