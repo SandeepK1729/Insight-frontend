@@ -89,9 +89,9 @@ class ModelForm extends React.Component {
             <div className="row justify-content-center flex flex-col">
                 <h1>Model Creation Form</h1>
                 <form onSubmit={this.handleSubmit}>
-                    <div class="form-group">
+                    <div className="form-group">
                       <label for="model_name">Selct Model</label>
-                      <select required onChange={this.handleChange} class="form-control" name="model_name" id="model_name">
+                      <select required onChange={this.handleChange} className="form-control" name="model_name" id="model_name">
                         <option selected disabled>Select Model</option>
                         {
                             this.state.models.map(model => (
@@ -102,13 +102,13 @@ class ModelForm extends React.Component {
                     </div>
 
                     {this.state.model_name === "K-Nearest Neighbors Classifier" && (<div>
-                        <label for="customRange1" class="form-label">Select Neighbors for KNN : {this.state.knn_val}</label>
-                        <input onChange={this.handleChange} type="range" defaultValue={2} class="form-range" id="knn_val" min="1" max="10" name="knn_val"/>
+                        <label for="customRange1" className="form-label">Select Neighbors for KNN : {this.state.knn_val}</label>
+                        <input onChange={this.handleChange} type="range" defaultValue={2} className="form-range" id="knn_val" min="1" max="10" name="knn_val"/>
                     </div>)}
 
-                    <div class="form-group">
+                    <div className="form-group">
                       <label for="dataset_id">Select Dataset</label>
-                      <select required onChange={this.handleChange} class="form-control" name="dataset_id" id="dataset_id">
+                      <select required onChange={this.handleChange} className="form-control" name="dataset_id" id="dataset_id">
                         <option selected disabled>Select Dataset</option>
                         {
                             this.state.datasets.map(dataset => (
