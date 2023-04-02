@@ -26,6 +26,8 @@ class Datasets extends React.Component {
 	componentDidMount() {
 		axios.get("/api/datasets/")
 			.then((json) => {
+		console.log(json);
+				
 				this.setState({
 					items: json.data,
 					DataisLoaded: true
