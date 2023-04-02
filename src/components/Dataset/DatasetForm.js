@@ -85,7 +85,7 @@ class DatasetForm extends React.Component {
         return (
             <div className="row justify-content-center flex flex-col">
                 <h1>Dataset Upload Form</h1>
-                <form onSubmit={this.handleSubmit}>
+                <form encType="multipart/form-data" onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <label for="name">Dataset Name</label>
                         <input onChange={this.handleChange} type="text" className="form-control" name="name" id="name" aria-describedby="nameOfDataset" placeholder={this.state.name}/>

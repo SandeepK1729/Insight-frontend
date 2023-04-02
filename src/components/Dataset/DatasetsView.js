@@ -66,7 +66,7 @@ class Datasets extends React.Component {
 							<tr key = { item.id } >
 								<td>{ item.id }</td>
 								<td>{ item.name }</td>
-								<td><a download={true} href={ item.path }><i className="fas fa-file-download"></i></a></td>
+								<td><a download={true} href={ process.env.REACT_APP_API_URL + item.path }><i className="fas fa-file-download"></i></a></td>
 							</tr>	
 						))
 					}
