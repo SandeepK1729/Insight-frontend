@@ -6,6 +6,10 @@ To get started with Insight, you'll need to clone this repository to your local 
 
 1. Clone the repository: git clone `https://github.com/SandeepK1729/insight-frontend.git`
 2. Change into the project directory: `cd insight-frontend`
+1. Create .env file for frontend in Frontend directory: 
+   ```javascript Copy code
+      REACT_APP_API_URL=http://127.0.0.1:8000
+    ```
 3. Install dependencies: `npm install`
 
 ### Usage
