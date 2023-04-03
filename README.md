@@ -23,3 +23,9 @@
 | PATCH     | ```https /api/models/<int:model_id>```    | Modifies the specific saved model		| 
 | DELETE    | ```https /api/models/<int:model_id>```    | Delete specific saved model			| 
 
+### Analyze report
+
+| Request   | Route                                     | Action                    			|
+| :-------- | :-------                                  | :--------------------     			|			
+| GET       | ```https /api/analyze```                  | Get metrics report of specific model with specific dataset_id if exist|
+| POST      | ```https /api/analyze```                  | Get metrics report of specific model with specific dataset_id if exist else generate model and gives report|
