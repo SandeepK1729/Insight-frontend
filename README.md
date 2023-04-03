@@ -1,31 +1,27 @@
+# Insight
+Insight is a machine learning web application that allows non-technical users to train and save custom machine learning models based on their own datasets, and to use these models to predict outcomes based on current input.
 
-## API Reference
+### Installation
+To get started with Insight, you'll need to clone this repository to your local machine and install its dependencies. Here's how to do that:
 
-### Datasets
+    1. Clone the repository: git clone https://github.com/SandeepK1729/insight-frontend.git
+    2. Change into the project directory: cd insight-frontend
+    3. Install dependencies: npm install
 
-| Request   | Route                                     | Action                    			|
-| :-------- | :-------                               	| :--------------------     			|			
-| GET       | ```/api/datasets```                     	| Get all datasets          			|
-| POST      | ```/api/datasets```                     	| Upload a dataset          			|
-| GET       | ```/api/datasets/<int:dataset_id>```    	| Get a specific dataset				| 
-| PUT       | ```/api/datasets/<int:dataset_id>```    	| Full update of specific dataset    	| 
-| PATCH     | ```/api/datasets/<int:dataset_id>```    	| Partial update of specific dataset  	| 
-| DELETE    | ```/api/datasets/<int:dataset_id>```    	| Delete specific dataset      			| 
+### Usage
+To start the development server, run npm start. This will open the app in your default browser at http://localhost:3000.
 
-### ModelFiles
+From here, you can upload your own datasets, train custom machine learning models, and use these models to predict outcomes based on current input.
 
-| Request   | Route                               | Action                    			|
-| :-------- | :-------                            | :--------------------     			|			
-| GET       | ```/api/models```                   | Get all saved models          		|
-| POST      | ```/api/models```                   | Train and save a model         		|
-| GET       | ```/api/models/<int:model_id>```    | Get info of specific saved model	| 
-| PUT       | ```/api/models/<int:model_id>```    | Modifies the specific saved model	| 
-| PATCH     | ```/api/models/<int:model_id>```    | Modifies the specific saved model	| 
-| DELETE    | ```/api/models/<int:model_id>```    | Delete specific saved model			| 
+### Contributing
+If you'd like to contribute to Insight, you can fork the repository and submit a pull request with your changes. Please make sure that your changes are well-documented and tested before submitting a pull request.
 
-### Analyze report
+### Credits
+Insight was built using the following technologies:
 
-| Request   | Route                              	| Action                    		|
-| :-------- | :-------                              |:--------------------     			|			
-| GET       | ```/api/analyze```                  	| Get metrics report of specific model with specific dataset_id if exist|
-| POST      | ```/api/analyze```                  	| Get metrics report of specific model with specific dataset_id if exist else generate model and gives report|
+    - ReactJS
+    - Axios
+    - Bootstrap
+    
+### License
+Insight is released under the [MIT License](https://opensource.org/license/MIT/). Feel free to use, modify, and distribute the code however you like.
