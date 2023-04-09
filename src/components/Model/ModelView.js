@@ -66,7 +66,7 @@ class Models extends React.Component {
 						<tr key = { item.id } >
 							<td>{ item.id }</td>
 							<td>{ item.model_name }</td>
-							<td><a href={ item.model_obj }><i className="fas fa-file-download"></i></a></td>
+							<td><a href={ process.env.REACT_APP_API_URL + item.model_obj }><i className="fas fa-file-download"></i></a></td>
 							<td>{ item.dataset }</td>
 						</tr>	
 					))
