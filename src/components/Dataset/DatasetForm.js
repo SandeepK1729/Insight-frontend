@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 
+import {Button} from "react-bootstrap";
+
 class DatasetForm extends React.Component {
     constructor(props) {
         super(props);
@@ -134,7 +136,7 @@ class DatasetForm extends React.Component {
 
                     {this.state.showMessage && (<p className={"text-" + this.state.messageType}>{this.state.message}</p>)}
                     
-                    <input type="submit" name="submit" value="Upload" onSubmit={this.handleSubmit}/>
+                    <Button variant={"primary"} type="submit"><i className="fas fa-upload fa-sm fa-fw"></i></Button>
                 </form>
             </div>
         );
