@@ -8,7 +8,7 @@ class ModelDetailedAnalysis extends React.Component {
         this.state = {
             model_name: props.model_name,
             dataset_id: props.dataset_id,
-            report: {},
+            // report: {},
             isDataLoaded: false
         }
 
@@ -34,10 +34,12 @@ class ModelDetailedAnalysis extends React.Component {
         if(!this.state.isDataLoaded) 
             return (<p>Loading</p>)
         return (
-            <div>
-                <h2>Model Name: {this.state.model_name}</h2>
-                <h2>Dataset Name: {this.state.dataset_name}</h2>
-                {/* {this.state.report} */}
+            <div style={{ width: '20%' }}>
+                <p>Model Name: {this.state.model_name}</p>
+                <p>Dataset Name: {this.state.dataset}</p>
+                <p>Accuracy Score: {this.state.accuracy}</p>
+                <p>Precision Score: {this.state['Precision Score']}</p>
+                <p>Recall Score: {this.state['Recall Score']}</p>
             </div>
         )
     }
